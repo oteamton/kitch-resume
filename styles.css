@@ -1,0 +1,57 @@
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 6 23 / var(--tw-bg-opacity));
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main,
+footer {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  background-color: #87ceeb; /* Sky blue shade */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+section {
+  background-color: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+section h2 {
+  color: #286279; /* Sky blue shade */
+}
+
+#skills ul li {
+  line-height: 2cap;
+}
+
+#edu-details {
+  line-height: 2cap;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+}
