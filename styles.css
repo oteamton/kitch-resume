@@ -7,47 +7,114 @@ body {
   padding: 0;
 }
 
-header,
-main,
-footer {
-  margin: 1rem;
-  padding: 1rem;
-}
-
-header {
-  display: flex;
-  background-color: #87ceeb; /* Sky blue shade */
+.profile {
+  display: grid;
+  grid-template-columns: [l-s] 1fr [l-e] 1fr [r-s] 1fr [r-e];
+  background-color: #384a52;
   color: white;
-  padding: 2rem;
-  text-align: center;
+  height: auto;
 }
 
-h1 {
-  margin: 0;
+.profile img {
+  grid-column: l-s / l-e;
+  place-self: center;
 }
 
-section {
-  background-color: white;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-}
-
-section h2 {
-  color: #286279; /* Sky blue shade */
-}
-
-#skills ul li {
-  line-height: 2cap;
+.profile-info {
+  grid-column: l-e / r-s;
+  justify-self: start;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
 }
 
 #edu-details {
   line-height: 2cap;
 }
 
+main {
+  display: grid;
+  grid-template-columns: [l-s] 1fr [l-e] 1fr [r-s] 1fr [r-e];
+  color: white;
+  height: 100svh;
+}
+
+#skills {
+  grid-column: l-s / l-e;
+  border: 2px solid white;
+  margin: 10px;
+  height: fit-content;
+}
+
+h2 {
+  text-align: center;
+}
+
+.lang,
+.frame,
+.db {
+  border-top: 2px solid white;
+  display: flex;
+  padding: 10px;
+  margin: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+#skills ul li {
+  line-height: 2cap;
+}
+
+ul.lang li,
+ul.frame li,
+ul.db li {
+  list-style: none;
+  padding: 10px;
+  font-size: 1rem; /* Readable text size */
+  border-radius: 8px;
+  border: goldenrod 1px solid;
+  color: #f2f2f2;
+}
+
+ul.lang li img,
+ul.frame li img,
+ul.db li img {
+  width: 50px;
+  vertical-align: middle;
+  /* margin-right: 5px; */
+}
+
+ul.lang li:hover,
+ul.frame li:hover,
+ul.db li:hover {
+  background-color: goldenrod;
+  cursor: pointer;
+}
+
+#contact,
+#online-presence {
+  grid-column: r-s / r-e;
+}
+
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
+  background-color: brown;
+  padding-inline: 10px;
+}
+
+#copyright {
+  align-self: center;
+}
+
+#copyright a{
+  text-decoration: none;
+  color: inherit;
+}
+
+#copyright img{
+  padding-bottom: 4px;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 768px) {
